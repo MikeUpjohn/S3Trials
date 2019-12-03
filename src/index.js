@@ -30,11 +30,13 @@ app.post("/upload-document", async (request, response) => {
 
     await s3.putObject(uploadParams, function (error, data) {
         if (error) {
-            console.log(error);
+            response.send(error);
         } else {
-            console.log(data);
+            response.send(data);
         }
     });
+
+    response.send("Error uploading!");
 });
 
 app.listen(3005, () => console.log("Server listening on 3005"));
