@@ -44,7 +44,7 @@ app.post("/upload-document", async (request, response) => {
 
 });
 
-app.get('/get-tags', async (request, response) => {
+app.get('/update-tags', async (request, response) => {
     const params = {
         Bucket: 'mike-upjohn',
         Key: '1575380214579.txt',
@@ -53,11 +53,11 @@ app.get('/get-tags', async (request, response) => {
     let newTags = [
         {
             "Key": "Category",
-            "Value": "4 December 2019"
+            "Value": "Final Test"
         },
         {
             "Key": "Type",
-            "Value": "09:30"
+            "Value": "Final Test Two"
         }];
 
     try {
